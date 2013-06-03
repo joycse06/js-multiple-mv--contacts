@@ -1,0 +1,29 @@
+<form class="form-search">
+          <input type="search" ng-model="search" class="input-medium search-query">
+      </form>  
+      
+
+      <div>
+          <table class="table table-bordered">
+              <thead>
+                <tr>
+                    <th>Name</th>  
+                    <th>Contact No.</th>  
+                    <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                    <tr ng-repeat="contact in contacts | filter:search">
+                        <td>{{contact.name}}</td>
+                        <td>{{contact.cell}}</td>
+                        <td><a class="btn" href="#/contact/{{$index+1}}" ><i class="icon-pencil"></i> Edit</a>&nbsp;&nbsp;&nbsp;<a href="#/delete/{{$index+1}}" class="btn btn-danger">Delete</a> </td>
+                    </tr>
+              </tbody>
+
+          </table>
+          <div class="well well-small">
+            <span>There are {{contacts.length}} peoples in the table.</span>
+          </div>    
+          <a href="#/add" class="btn">Add new Contact</a>
+          
+      

@@ -1,0 +1,12 @@
+ul#nameList{
+	font-size: 22px;
+	li{
+		line-height: 30px;
+		border: 1px solid darken(white,40%);
+		margin-top:10px;
+		padding:4px;
+	}
+}
+input[type='number']{
+	height:30px;
+}
